@@ -1,0 +1,36 @@
+image: monachus/hugo
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script: cd site && hugo
+  artifacts:
+    when: on_success
+    paths:
+    - site/public
+
+deploy_staging:
+  stage: deploy
+  script:
+  - mkdir public
+  - mv site/public/* public
+  artifacts:
+    paths:
+    - public
+
+deploy_productive:
+  stage: deploy
+  script:
+    - echo "Deploy to production server not yet implemented for a reason."
+  environment:
+    name: production
+    url: https://panorama-research.org
+  when: manual
+  only:
+  - master
