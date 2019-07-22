@@ -1,3 +1,8 @@
 baseURL = "http://www.panorama-research.org/"
 languageCode = "en-us"
-title = "PANORAMA - Boosting Design Efficiency for Heterogeneous Systems"
+title = "Panorama - Boosting Design Efficiency for Heterogeneous Systems"
+theme = "eclipsefdn-hugo-solstice-theme"
+metaDataFormat = "yaml"
+#googleAnalytics = ""
+disableKinds = ["taxonomyTerm"]
+themesDir = "../node_modules/"
