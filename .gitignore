@@ -7,3 +7,4 @@
 /site/static/css/
 /site/public/
 /.settings/
+package-lock.json
