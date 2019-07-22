@@ -1,2 +1,9 @@
 /site/public/**
 /site/_hugo-tool*/**
+/node_modules/
+/site/static/images/vendor/
+/site/static/fonts/vendor/
+/site/static/js/
+/site/static/css/
+/site/public/
+/.settings/
