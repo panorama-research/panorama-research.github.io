@@ -1,4 +1,4 @@
-image: monachus/hugo
+image: bpack/hugo-npm
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -10,9 +10,8 @@ stages:
 build:
   stage: build
   script: 
-  - apt update && apt install npm
-  - cd site
   - npm install
+  - cd site
   - hugo
   artifacts:
     when: on_success
