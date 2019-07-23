@@ -10,6 +10,7 @@ stages:
 build:
   stage: build
   script: 
+  - apt update && apt install npm
   - cd site
   - npm install
   - hugo
