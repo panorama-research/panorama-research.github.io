@@ -9,7 +9,10 @@ stages:
 
 build:
   stage: build
-  script: cd site && hugo
+  script: 
+  - cd site
+  - npm install
+  - hugo
   artifacts:
     when: on_success
     paths:
