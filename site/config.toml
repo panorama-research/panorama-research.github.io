@@ -1,8 +1,54 @@
 baseURL = "http://www.panorama-research.org/"
+DefaultContentLanguage = "en"
 languageCode = "en-us"
 title = "Panorama - Boosting Design Efficiency for Heterogeneous Systems"
 theme = "eclipsefdn-hugo-solstice-theme"
 metaDataFormat = "yaml"
 #googleAnalytics = ""
-disableKinds = ["taxonomyTerm"]
+disableKinds = ["taxonomy", "taxonomyTerm"]
 themesDir = "../node_modules/"
+
+[Params]
+  google_tag_manager = "GTM-5WLCZXC"
+  description = "The Panorama project boosts design efficiency for heterogeneous automotive and aerospace systems."
+  subtitle = "Accelerating design efficiency for automotive and aerospace systems"
+  seo_title_suffix = " | ITEA3"
+  keywords = ["open-source", "system designs", "heterogeneous systems"]
+  logo = "images/logo/logo_panorama.svg"
+  styles = "css/styles.css"
+  favicon = "images/favicon.ico"
+#  share_img = ""
+#  gcse = ""
+#  subtheme = "jakarta"
+  header_wrapper_class = "header-default-bg-img"
+  js = "js/solstice.js"
+#  show_events = true
+# call_for_action_text = ""
+# call_for_action_url = ""
+# call_for_action_icon = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[Author]
+  name = "Panorama Project partners"
+  website = "http://www.panorama-research.org"
+  email = "nfo@panorama-research.org"
+  #facebook = "eclipse.org"
+  twitter = "PanoramaEng"
+  #youtube = "EclipseFdn"
+  #googleplus = "+Eclipse"
+  #linkedin = "company/eclipse-foundation/"
+
+[permalinks]
+  news = "/:sections/:year/:month/:day/:slug/"
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+  
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 1
