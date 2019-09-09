@@ -9,6 +9,9 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 themesDir = "../node_modules/"
 enableRobotsTXT = true
 
+[module.hugoVersion]
+min = "0.55"
+
 [Params]
   google_tag_manager = "GTM-5WLCZXC"
   description = "The Panorama project boosts design efficiency for heterogeneous automotive and aerospace systems."
@@ -35,7 +38,7 @@ enableRobotsTXT = true
 [Author]
   name = "Panorama Project partners"
   website = "http://www.panorama-research.org"
-  email = "nfo@panorama-research.org"
+  email = "info@panorama-research.org"
   #facebook = ""
   twitter = "PanoramaEng"
   #youtube = ""
