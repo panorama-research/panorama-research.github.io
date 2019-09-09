@@ -1,4 +1,4 @@
-baseURL = "http://www.panorama-research.org/"
+baseURL = "" # Fixes staging build
 DefaultContentLanguage = "en"
 languageCode = "en-us"
 title = "Panorama - Boosting Design Efficiency for Heterogeneous Systems"
