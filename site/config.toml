@@ -1,4 +1,5 @@
 baseURL = "" # Fixes staging build
+relativeurls = true # Fixes staging build (bad css)
 DefaultContentLanguage = "en"
 languageCode = "en-us"
 title = "Panorama - Boosting Design Efficiency for Heterogeneous Systems"
