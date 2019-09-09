@@ -12,10 +12,9 @@ pages:
   - npm install
   - cd site
   - hugo
-  - mv site/public public
   artifacts:
     paths:
-    - public
+    - site/public
   only:
   - master
 
