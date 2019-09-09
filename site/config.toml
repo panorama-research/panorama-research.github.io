@@ -7,6 +7,7 @@ metaDataFormat = "yaml"
 #googleAnalytics = ""
 disableKinds = ["taxonomy", "taxonomyTerm"]
 themesDir = "../node_modules/"
+enableRobotsTXT = true
 
 [Params]
   google_tag_manager = "GTM-5WLCZXC"
@@ -17,15 +18,15 @@ themesDir = "../node_modules/"
   logo = "images/logo/logo_panorama.svg"
   styles = "css/styles.css"
   favicon = "images/favicon.ico"
-#  share_img = ""
-#  gcse = ""
-#  subtheme = "jakarta"
+  share_img = "images/logo/logo_panorama.svg"
+  gcse = ""
+#  subtheme = ""
   header_wrapper_class = "header-default-bg-img"
   js = "js/solstice.js"
-#  show_events = true
 # call_for_action_text = ""
 # call_for_action_url = ""
 # call_for_action_icon = ""
+  navbar_wrapper_classes = "background-white"
 
 [taxonomies]
   category = "categories"
@@ -35,11 +36,11 @@ themesDir = "../node_modules/"
   name = "Panorama Project partners"
   website = "http://www.panorama-research.org"
   email = "nfo@panorama-research.org"
-  #facebook = "eclipse.org"
+  #facebook = ""
   twitter = "PanoramaEng"
-  #youtube = "EclipseFdn"
-  #googleplus = "+Eclipse"
-  #linkedin = "company/eclipse-foundation/"
+  #youtube = ""
+  #googleplus = ""
+  #linkedin = ""
 
 [permalinks]
   news = "/:sections/:year/:month/:day/:slug/"
@@ -48,7 +49,7 @@ themesDir = "../node_modules/"
   plainIDAnchors = true
   hrefTargetBlank = true
   
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 1
+#[[menu.main]]
+#  name = "About"
+#  url = "/about/"
+#  weight = 1

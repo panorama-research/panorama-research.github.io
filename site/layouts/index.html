@@ -1,0 +1,127 @@
+{{ define "header"}}
+<a class="sr-only" href="#content">Skip to main content</a>
+<header
+	class="header-wrapper{{- with .Params.header_wrapper_class | default .Site.Params.header_wrapper_class }} {{ . }}{{end}}"
+	id="header-wrapper">
+	{{ partial "navbar.html" . }} {{ if isset .Page.Params "headline" }}
+	<div
+		class="jumbotron featured-jumbotron margin-bottom-0 padding-top-40">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-24">
+					<h1 class="headline">{{ .Page.Params.headline }}</h1>
+					<p class="headline">{{ .Page.Params.subtitle }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ end }}
+</header>
+{{ end }} 
+
+{{ define "main" }}
+<div class="container" id="50_words">
+	<h1 class="headline">What is the Panorama project</h1>
+	<p class="text-justify">The Panorama project boosts design
+		efficiency for heterogeneous automotive and aerospace systems. Based
+		in open source, it provides an environment for collaboration amongst
+		diverse hardware and software technologies and teams, especially at
+		the early stages of design. It supports efficient design decisions by
+		defining evolving standards, tools and best practices for exchange of
+		non-functional, formal models.</p>
+</div>
+
+<h1 class="headline">Open Ecosystem to support Heterogenous
+	Mobility Systems</h1>
+<div class="row" id="open_platform">
+	<div class="col-md-12 margin-bottom-30">
+		<p class="text-justify">Software developers in the automotive and
+			aircraft industries will face major challenges in the future. Future
+			mobility will be electrified, automated and highly networked. As a
+			result, mobility systems will be subject to radical changes in the
+			way E/E architectures are designed, software and hardware are
+			integrated, and development processes are shaped. Three central,
+			heterogeneous fields of tension are emerging:
+		<ul>
+			<li class="text-justify">The application of heterogeneous, i.e.,
+				specialized and networked hardware (e.g., drive, comfort,
+				multimedia,...) are integrated within central hardware platforms.</li>
+		</ul>
+	</div>
+	<div class="col-md-12">
+		<ul>
+			<li class="text-justify">Future development processes will be
+				designed collaboratively by several heterogeneous partners (OEM,
+				Tier 1, and Tier 2 suppliers) along the value chain. In particular,
+				Software providers, domain experts, and service providers will
+				become more involved in future development processes.</li>
+			<li class="text-justify">The application of heterogeneous, i.e.,
+				specialized and networked hardware (e.g., AI-Accelerator for the
+				realization of Deep Learning), will become necessary.</li>
+		</ul>
+		<p class="text-justify">Panorama addresses these issues through an
+			open ecosystem of software tools for effective collaborative design.</p>
+	</div>
+</div>
+
+<div class="container">
+	<h1 class="headline">Research focus</h1>
+	<div class="row" id="research_focus">
+		<div class="col-md-8">
+			<img height="290" src="images/panorama/heterogeneous.png"
+				alt="heterogenous">
+			<p class="text-center">Integration of heterogeneous function
+				domains</p>
+		</div>
+		<div class="col-md-8">
+
+			<img height="290" src="images/panorama/chip.png" alt="chip">
+			<p class="text-center">Use of heterogeneous specialized hardware</p>
+		</div>
+		<div class="col-md-8">
+			<img height="290" src="images/panorama/team.png" alt="team">
+			<p class="text-center">Involvement of heterogeneous,
+				collaborating parties for design and development</p>
+		</div>
+	</div>
+</div>
+
+
+<h1 class="headline">Use cases</h1>
+<p>The project results will be explored and demonstrated via the
+	following use cases.</p>
+<div class="row" id="uc1">
+	<div class="col-md-8">
+		<img height="290" src="images/panorama/factories.png" alt="cross-company">
+		<p class="text-center">Exchange of system models in cross-company, collaborative development projects</p>
+	</div>
+	<div class="col-md-8">
+		<img width="290" src="images/panorama/hw_assessment.png" alt="hw_assessment">
+		<p class="text-center">Assessment of different hardware architectures for a given software</p>
+	</div>
+	<div class="col-md-8">
+		<img height="290" src="images/panorama/alternatives.png" alt="alternatives">
+		<p class="text-center">Assessment of deployment alternatives
+for a given software onto a given
+hardware architecture</p>
+	</div>
+</div>
+<div class="row" id="uc2">
+	<div class="col-md-8">
+		<img width="290" src="images/panorama/guidance.png" alt="cross-company">
+		<p class="text-center">Informed guidance for optimization of
+system level design decisions</p>
+	</div>
+	<div class="col-md-8">
+		<img width="290" src="images/panorama/traceability.png" alt="hw_assessment">
+		<p class="text-center">Traceability and Safety throughout the
+development process</p>
+	</div>
+	<div class="col-md-8">
+		<img width="290" src="images/panorama/security.png" alt="alternatives">
+		<p class="text-center">Secure model exchange in collaborative
+development projects</p>
+	</div>
+</div>
+
+{{ end }}
