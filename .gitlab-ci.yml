@@ -18,7 +18,7 @@ build:
     paths:
     - site/public
 
-deploy_staging:
+pages:
   stage: deploy
   script:
   - mkdir public
@@ -26,6 +26,8 @@ deploy_staging:
   artifacts:
     paths:
     - public
+  only:
+  - master
 
 deploy_productive:
   stage: deploy
