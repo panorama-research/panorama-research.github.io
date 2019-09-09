@@ -4,17 +4,27 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive
   
 stages:
+  - build
   - deploy
 
-pages:
-  stage: deploy
-  script:
+build:
+  stage: build
+  script: 
   - npm install
   - cd site
   - hugo
   artifacts:
+    when: on_success
     paths:
     - site/public
+
+pages:
+  stage: deploy
+  script:
+  - mv site/public public
+  artifacts:
+    paths:
+    - public
   only:
   - master
 
