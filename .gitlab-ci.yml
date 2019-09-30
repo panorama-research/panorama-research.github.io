@@ -2,26 +2,29 @@ image: lkrawczyk/docker-hugo-npm:0.58.1
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  
-stages:
-  - build
-  - deploy
 
 build:
   stage: build
-  script: 
-  - npm install
+  script:
+  # Since NPM is a pain in the ...., we need to use this flag to fix an unreported error.
+  - npm install --unsafe-perm
   - cd site
   - hugo
+  cache:
+    policy: push
+    paths:
+    - node_modules/
   artifacts:
-    when: on_success
     paths:
     - site/public
 
 pages:
+  # Pages is the default staging environment. Anytime something gets committed to the master branch, the staging environment will be updated.
   stage: deploy
   script:
-  - mv site/public public
+    - echo Updated staging environment on $(date)
+    - mkdir public
+    - mv site/public/* public
   artifacts:
     paths:
     - public
@@ -29,6 +32,7 @@ pages:
   - master
 
 deploy_productive:
+  # Placeholder for uploading content onto the panorama website.
   stage: deploy
   script:
     - echo "Deploy to production server not yet implemented for a reason."
