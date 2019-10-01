@@ -1,4 +1,4 @@
-image: lkrawczyk/docker-hugo-npm:0.58.1
+image: lkrawczyk/docker-hugo-npm:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -24,7 +24,7 @@ pages:
   script:
     - echo Updated staging environment on $(date)
     - mkdir public
-    - mv site/public/* public
+    - cp -vfR site/public/* public/
   artifacts:
     paths:
     - public
@@ -35,10 +35,7 @@ deploy_productive:
   # Placeholder for uploading content onto the panorama website.
   stage: deploy
   script:
-    - echo "Deploy to production server not yet implemented for a reason."
-  environment:
-    name: production
-    url: https://panorama-research.org
+    - lftp -c "set ftp:ssl-allow no; open -u $USER,$PASS $HOST; mirror -Rev site/public/ ./www  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
   when: manual
   only:
   - master
