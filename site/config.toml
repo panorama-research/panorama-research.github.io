@@ -2,7 +2,7 @@ baseURL = "" # Fixes staging build
 relativeurls = true # Fixes staging build (bad css)
 DefaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Panorama - Boosting Design Efficiency for Heterogeneous Systems"
+title = "PANORAMA - Boosting Design Efficiency for Heterogeneous Systems"
 theme = "eclipsefdn-hugo-solstice-theme"
 metaDataFormat = "yaml"
 #googleAnalytics = ""
@@ -15,7 +15,7 @@ min = "0.55"
 
 [Params]
   google_tag_manager = "GTM-5WLCZXC"
-  description = "The Panorama project boosts design efficiency for heterogeneous automotive and aerospace systems."
+  description = "The PANORAMA project boosts design efficiency for heterogeneous automotive and aerospace systems."
   subtitle = "Accelerating design efficiency for automotive and aerospace systems"
   seo_title_suffix = " | ITEA3"
   keywords = ["open-source", "system designs", "heterogeneous systems"]
@@ -37,7 +37,7 @@ min = "0.55"
   tag = "tags"
 
 [Author]
-  name = "Panorama Project partners"
+  name = "PANORAMA Project partners"
   website = "http://www.panorama-research.org"
   email = "info@panorama-research.org"
   #facebook = ""
