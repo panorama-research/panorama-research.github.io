@@ -1,4 +1,4 @@
-image: lkrawczyk/docker-hugo-npm:0.58.1
+image: lkrawczyk/docker-hugo-npm:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
