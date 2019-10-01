@@ -24,7 +24,7 @@ pages:
   script:
     - echo Updated staging environment on $(date)
     - mkdir public
-    - cp site/public/* public
+    - cp -vfR site/public/* public/
   artifacts:
     paths:
     - public
