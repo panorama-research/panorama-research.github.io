@@ -39,3 +39,6 @@ deploy_productive:
   when: manual
   only:
   - master
+  artifacts:
+    paths:
+    - site/public
