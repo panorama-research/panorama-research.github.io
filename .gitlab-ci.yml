@@ -10,10 +10,6 @@ build:
   - npm install --unsafe-perm
   - cd site
   - hugo
-  cache:
-    policy: push
-    paths:
-    - node_modules/
   artifacts:
     paths:
     - site/public
