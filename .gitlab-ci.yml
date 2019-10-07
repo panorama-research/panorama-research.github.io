@@ -9,7 +9,7 @@ build:
   # Since NPM is a pain in the ...., we need to use this flag to fix an unreported error.
   - npm install --unsafe-perm
   - cd site
-  - hugo
+  - hugo --ignoreCache --forceSyncStatic --verbose
   artifacts:
     paths:
     - site/public
