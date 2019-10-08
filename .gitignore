@@ -5,6 +5,7 @@
 /site/static/fonts/vendor/
 /site/static/js/
 /site/static/css/
+/site/themes/**
 /site/public/
 /.settings/
 .DS_Store

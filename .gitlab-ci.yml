@@ -8,6 +8,9 @@ build:
   script:
   # Since NPM is a pain in the ...., we need to use this flag to fix an unreported error.
   - npm install --unsafe-perm
+  # Start Workaround for Bug #1
+  - cp tmpWorkaround/bg-jumbotron.jpg site/static/images/
+  # End Workaround for Bug #1
   - cd site
   - hugo --ignoreCache --forceSyncStatic --verbose
   artifacts:
