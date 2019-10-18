@@ -57,3 +57,31 @@ min = "0.55"
 #  name = "About"
 #  url = "/about/"
 #  weight = 1
+
+#[[menu.main]]
+#  name = "Research Focus"
+#  url = "/researchfocus/"
+#  weight = 1
+
+[[menu.main]]
+  name = "Use Cases"
+  url = "/usecases/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Traceability"
+  url = "/usecases/traceability"
+  weight = 1
+  parent = "Use Cases"
+
+  [[menu.main]]
+  name = "Collaboration"
+  url = "/usecases/collaboration"
+  weight = 1
+  parent = "Use Cases"
+
+[[menu.main]]
+  name = "Related Projects"
+  url = "/relatedprojects/"
+  weight = 1
+
