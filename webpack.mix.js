@@ -14,10 +14,10 @@
 mix = require('laravel-mix');
 mix.options({uglify: {uglifyOptions: {compress: false, output: {comments: true}}}});
 
-mix.setPublicPath('site/static');
+mix.setPublicPath('static');
 mix.setResourceRoot('../');
 
-mix.less('./site/less/styles.less', 'site/static/css/styles.css');
+mix.less('./less/styles.less', 'static/css/styles.css');
 
 mix.scripts([
     './node_modules/jquery/dist/jquery.min.js',
@@ -25,8 +25,8 @@ mix.scripts([
     './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
     './node_modules/feather-icons/dist/feather.min.js',
     './node_modules/cookieconsent/src/cookieconsent.js',
-    './js/cookieconsent.js',
+    './node_modules/eclipsefdn-solstice-assets/js/solstice.cookieconsent.js',
     './node_modules/eclipsefdn-solstice-assets/js/eclipsefdn.videos.js',
     './node_modules/eclipsefdn-solstice-assets/js/solstice.cookies.js',
     './node_modules/eclipsefdn-solstice-assets/js/solstice.js'
-], './site/static/js/solstice.js');
+], './static/js/solstice.js');
