@@ -1,6 +1,6 @@
-# baseurl = "https://panorama-research.org/"
-baseurl = "" # Fixes staging build
-relativeurls = true # Fixes staging build (bad css)
+baseurl = "https://panorama-research.org/"
+# baseurl = "" # Fixes staging build
+# relativeurls = true # Fixes staging build (bad css)
 DefaultContentLanguage = "en"
 title = "" 
 theme = "eclipsefdn-hugo-solstice-theme"
