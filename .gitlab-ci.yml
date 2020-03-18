@@ -8,22 +8,16 @@ build:
   script:
   # Since NPM is a pain in the ...., we need to use this flag to fix an unreported error.
   - npm install --unsafe-perm
-  # Start Workaround for Bug #1
-  - cp tmpWorkaround/bg-jumbotron.jpg site/static/images/
-  # End Workaround for Bug #1
-  - cd site
   - hugo --ignoreCache --forceSyncStatic --verbose
   artifacts:
     paths:
-    - site/public
+    - public
 
 pages:
   # Pages is the default staging environment. Anytime something gets committed to the master branch, the staging environment will be updated.
   stage: deploy
   script:
     - echo Updated staging environment on $(date)
-    - mkdir public
-    - cp -vfR site/public/* public/
   artifacts:
     paths:
     - public
@@ -34,10 +28,10 @@ deploy_productive:
   # Placeholder for uploading content onto the panorama website.
   stage: deploy
   script:
-    - lftp -c "set net:timeout 2; set net:max-retries 10; set net:reconnect-interval-base 2; set ftp:ssl-protect-data true; open -u $USER,\"$PASS\" $URL; mirror -Rev site/public/ ./www  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+    - lftp -c "set net:timeout 2; set net:max-retries 10; set net:reconnect-interval-base 2; set ftp:ssl-protect-data true; open -u $USER,\"$PASS\" $URL; mirror -Rev public/ ./www  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
   when: manual
   only:
   - master
   artifacts:
     paths:
-    - site/public
+    - public
