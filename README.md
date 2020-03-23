@@ -22,9 +22,11 @@ npm install && npm run production && hugo server
 
 ### Adding News Item
 Create a new file in folder /content/news using one of the existing ones as template.
+Images go into folder /static/images/news
 
 ### Use Cases
 Use case pages are prepared in folder /content/usecases 
+Images go into folder /static/images/usecases
 
 ## Declared Project Licenses
 
